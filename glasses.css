@@ -1,0 +1,24 @@
+body {
+	background-color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-spacing: 15px;
+}
+
+.firstImage {
+	z-index: -1;
+	position: sticky(top);
+}
+
+.secondImage {
+	position: sticky(top);
+	opacity: 0;
+	transition: .5s ease;
+}
+
+.firstImage:hover .secondImage {
+	opacity: 1;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<html lang="en">
+	
+		<title> IP Checker </title>
+		
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<script type="text/JavaScript">
+			function showInput() {
+				document.getElementById('display').innerHTML = 
+					document.getElementById("media").value;
+			}
+			
+			function revealText() {
+				document.getElementById("spoilerFree").innerHTML="is covered by our Anti Spoiler Technology!";
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+
+		
+		<ul class="navBar">
+			<li> <a href="index.html" > Home </a> </li>
+			<li> <a href="aboutPage.html" > About the Product </a> </li>
+			<li> <a href="optometristPage.html" > Book an Eye Test </a> </li>
+			<li> <a class="active" href="ipCheckPage.html" > Spoiler Checker </a> </li>
+			<li> <a href="virtualTryOnPage.html" > Virtual Try On </a> </li>
+			<li style="float:right"> <a href="checkoutPage.html" > Checkout </a> </li>
+			<li style="float:right"> <a href="contactPage.html" > Contact Us </a> </li>
+		</ul>
+		
+		
+		<h2 class="heading" align="center"> Not sure if your favourite show is covered by our Spoiler Free tech? </h2>
+		
+		<p class="aboutText" align="center">
+			The Anti Spoiler Technology in the EYE-C allows you to browse the internet spoiler free for whatever piece of media you can think of. If you'd like to check if any show, 
+			movie or book is covered by our spoiler prevention software, simply enter the name in the box below, and we will tell you if we cover it!
+		</p>
+		
+		<div class="spoilerCheckContainer">	
+			<input type="text" id="media" class="spoilerText" name="media">	<br/>
+			<input type="submit" class="spoilerButton" onclick="showInput(); revealText();" value="Submit" /> 
+			<input type="button"  class="spoilerButton" value="Reset" onclick="window.location.href='ipCheckPage.html'" /> </br>
+		
+		
+			<p> <span id="display"> </span> <span id="spoilerFree"> </span> </p>
+		</div>
+		
+		<p class="aboutText" align="center">	If somehow your choice is not covered by us, <a href="contactPage.html">contact us</a> with the details and we will do our best to include it. </p>
+		
+	</body>
+	
+	<footer>
+		<hr/>
+		<p>&copy; EYE-C
+	</footer>
+	
+</html>

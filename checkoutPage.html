@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<html lang="en">
+	
+		<title> Checkout </title>
+		
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body>
+		
+		<ul class="navBar">
+			<li> <a href="index.html" > Home </a> </li>
+			<li> <a href="aboutPage.html" > About the Product </a> </li>
+			<li> <a href="optometristPage.html" > Book an Eye Test </a> </li>
+			<li> <a href="ipCheckPage.html" > Spoiler Checker </a> </li>
+			<li> <a href="virtualTryOnPage.html" > Virtual Try On </a> </li>
+			<li style="float:right"> <a class="active" href="checkoutPage.html" > Checkout </a> </li>
+			<li style="float:right"> <a href="contactPage.html" > Contact Us </a> </li>
+		</ul>
+		
+		
+		<h1 class="heading" align="center"> Your Basket </h2>
+		
+		
+		<table class="cart" align="center"> 
+				
+			<tr class="cart">
+				<th class="cartHeading"> Product </th>
+				<th class="cartHeading"> Prescription </th>
+				<th class="cartHeading"> Bifocal Lenses </th>
+				<th class="cartHeading"> Anti Glare </th>
+				<th class="cartHeading"> Price </th>
+			</tr>
+			
+			<tr class="cart">	
+				
+				<td class="cart">
+					<span id="product"> </span>
+				</td>
+				
+				<td class="cart">
+					<span id="prescription"> </span>
+				</td>
+					
+				<td class="cart">
+					<span id="bifocal"> </span>
+				</td>
+					
+				<td class="cart">
+					<span id="glare"> </span>
+				</td>
+				
+				<td class="cart">
+					<span id="price" </span>
+				</td>
+					
+			</tr>
+				
+		</table>
+		
+		
+		<div class="cartButtonsContainer">
+			<button class="cartReset" onclick="deleteItems(); window.location.href='checkoutPage.html'; purchased()" >Purchase Item</button>
+			<button class="cartReset" onclick="deleteItems(); window.location.href='checkoutPage.html'" >Empty Cart</button>
+		</div>
+		
+		
+		
+		
+		
+		
+	</body>
+	
+	<script>
+		document.getElementById("prescription").innerHTML=localStorage.getItem("txtValue2");
+		document.getElementById("product").innerHTML=localStorage.getItem("txtValue1");
+		document.getElementById("bifocal").innerHTML=localStorage.getItem("txtValue3");
+		document.getElementById("glare").innerHTML=localStorage.getItem("txtValue4");
+		document.getElementById("price").innerHTML=localStorage.getItem("txtValue5");
+		
+		
+		
+		function deleteItems() {
+			localStorage.clear();
+		}
+		
+		function purchased() {
+			alert("Thank you for buying our product!");
+		}
+	</script>
+	
+</html>

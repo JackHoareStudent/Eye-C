@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<html lang="en">
+	
+		<title> About </title>
+		
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body>
+		
+		<ul class="navBar">
+			<li> <a href="index.html" > Home </a> </li>
+			<li> <a class="active" href="aboutPage.html" > About the Product </a> </li>
+			<li> <a href="optometristPage.html" > Book an Eye Test </a> </li>
+			<li> <a href="ipCheckPage.html" > Spoiler Checker </a> </li>
+			<li> <a href="virtualTryOnPage.html" > Virtual Try On </a> </li>
+			<li style="float:right"> <a href="checkoutPage.html" > Checkout </a> </li>
+			<li style="float:right"> <a href="contactPage.html" > Contact Us </a> </li>
+		</ul>
+		
+
+		
+		<h1 class="heading" align="center"> What is EYE-C? </h1>
+		
+		
+		<div id="aboutContainer">
+			<h2 class="aboutHeading">
+				The EYE-C is a brand new line of cutting edge technology Smart Glasses. <br/> It's features include:
+			</h2>
+		
+			<ul class="aboutText">
+				<li> Anti Spoiler Technology </li>
+				<li> Fast and Easy Glasses to Sunglasses Swapping </li>
+				<li> Prescription Lenses </li>
+				<li> Bifocal Lenses </li>
+				<li> Anti Glare </li>
+			</ul>
+			<br/>
+		
+			<button type="button" class="collapsible"> <b> <u> Anti Spoiler </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					Are you sick of seeing spoilers online for shows, books or any stories that you're watching or reading? Well worry no more! With the EYE-C, you'll never have to see spoilers ever again.
+					Simply download the app, connect to your EYE-C glasses, and input whatever show, movie etc you are watching or planning to watch and how far into it you are, and the EYE-C will take care of the rest.
+					Spoilers are a thing of the past with the EYE-C.
+				</p>
+			</div>
+			
+			<br/>
+			<br/>
+		
+			<button type="button" class="collapsible"> <b> <u> Fast and Easy Glasses to Sunglasses Swapping </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					We've all been there. Out on a sunny day with our sunglasses on, only to walk inside and realise we can't see our own hand with how dark it is, and now you have to rummage for your glasses case
+					to swap back to your regular pair. You'll never have this problem again with the EYE-C. All it takes is the press of a button on the frame to instantly switch to and from sunglasses mode.
+				</p>
+			</div>
+			
+			<br/>
+			<br/>
+		
+			<button type="button" class="collapsible"> <b> <u> Prescription Lenses </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					When ordering a pair of EYE-C Smart Glasses, enter your current lens prescription to receive prescription glasses and sunglass lenses, or choose no prescription
+					if you don't need any.
+				</p>
+			</div>
+			
+			<br/>
+			<br/>
+			
+			<button type="button" class="collapsible"> <b> <u> Bifocal Lenses </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					Can't read things up close when wearing your glasses? Bifocal Lenses are for you! These lenses use 2 prescriptions in the top and bottom of the
+					lens to allow clear close and far vision
+				</p>
+			</div>
+			
+			<br/>
+			<br/>
+		
+			<button type="button" class="collapsible"> <b> <u> Anti Glare </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					Never worry about glare from the sun again. The Anti Glare lenses will keep your glasses glare free.
+				</p>
+			</div>
+			
+			<br/>
+			<br/>
+		
+			<button type="button" class="collapsible"> <b> <u> Using The EYE-C App </u> </b> </button>
+			<div class="content">
+				<p class="aboutText">
+					Download the EYE-C app from your devices store, pair the app to your glasses and you'll never have to see spoilers again!
+				</p>
+			</div>
+		</div>
+
+		
+	</body>
+	
+	<script> 
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("activeCollapse");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+					content.style.display = "none";
+				} else {
+					content.style.display = "block";
+				}
+			});
+		} 
+		
+	</script>
+	<footer>
+		<hr/>
+		<p>&copy; EYE-C
+	</footer>
+	
+</html>

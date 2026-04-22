@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<html lang="en">
+	
+		<title> Product 1 </title>
+		
+		
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body>
+		
+		
+		<ul class="navBar">
+			<li> <a href="index.html" > Home </a> </li>
+			<li> <a href="aboutPage.html" > About the Product </a> </li>
+			<li> <a href="optometristPage.html" > Book an Eye Test </a> </li>
+			<li> <a href="ipCheckPage.html" > Spoiler Checker </a> </li>
+			<li> <a href="virtualTryOnPage.html" > Virtual Try On </a> </li>
+			<li style="float:right"> <a href="checkoutPage.html" > Checkout </a> </li>
+			<li style="float:right"> <a href="contactPage.html" > Contact Us </a> </li>
+		</ul>
+		
+		
+		<input type="button" class="backButton" value="Back" onclick="window.location.href='index.html'" />
+		
+		
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img class="productImages" src="../productImages/thickRound.jpg" width="98%" />
+			</div>
+			
+			<div class="mySlides fade">
+				<img class="productImages" src="../productImages/thickRoundSide.jpg" width="98%" />
+			</div>
+			
+			<div class="mySlides fade">
+				<img class="productImages" src="../productImages/thickRoundOtherSide.jpg" width="98%" />
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+			
+			
+		</div>
+		
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		
+		</br>
+		
+		<div id="productContainer">
+			
+			<h2 class="productName" > EYE-C 1 </h2>
+			<hr/>
+			
+			<div id="productContainerLeft">
+				
+		
+				<h2 class="featuresHeading" > <u> Product Features: </u> </h2>
+			
+				<form action="checkoutPage.html">
+				
+					<ul class="featureText">
+						<li> Cutting Edge Anti Spoiler Technology </li>
+						<li> Polarising Lenses </li>
+						<li> Quick Lens Swap Button </li>
+						<li>
+							Bifocal Lenses 
+							<label> ( Yes </label> 
+							<input type="checkbox" name="bifocal" id="bifocal" value="Yes" /> 
+							<label> No </label>
+							<input type="checkbox" name="bifocal" id="bifocal" value="No" /> )
+						</li>
+						<li>
+							Anti Glare 
+							<label> ( Yes </label>
+							<input type="checkbox" name="glare" id="glare" value="Yes" /> 
+							<label> No </label>
+							<input type="checkbox" name="glare" id="glare" value="No" /> )
+						</li>
+						<li> Prescription Lenses <input type="number" name="prescription" id="prescription" placeholder=" eg -3.25" size="5"/>
+					</ul>
+					
+					<input type="submit" value="Add to cart" id="addToCart" onclick="getData()"/> </li> 
+					<input type="radio" name="product" id="product" class="product" checked="checked" value="EYE-C 1" />
+					<input type="radio" name="price" id="price" class="product" checked="checked" value="€100" />
+				</form>
+			</div>
+			
+			<div id="productContainerRight">
+				
+				<input type="button" class="learnMore" value="Learn more about the product's features" onclick="window.location.href='aboutPage.html'" />
+				
+			</div>
+			
+			<div id="clear"> </div>
+		</div>
+		
+		
+		
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+			
+			function getData() {
+				
+				var product = document.querySelector('input[name="product"]:checked').value;
+				var price = document.querySelector('input[name="price"]:checked').value;
+				var bifocal = document.querySelector('input[name="bifocal"]:checked').value;
+				var glare = document.querySelector('input[name="glare"]:checked').value;
+				var prescription = document.getElementById("prescription").value;
+				
+				
+				localStorage.setItem("txtValue1", product);
+				localStorage.setItem("txtValue2", prescription);
+				localStorage.setItem("txtValue3", bifocal);
+				localStorage.setItem("txtValue4", glare);
+				localStorage.setItem("txtValue5", price);
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+	
+	<footer>
+		<hr/>
+		<p>&copy; EYE-C
+	</footer>
+	
+</html>
